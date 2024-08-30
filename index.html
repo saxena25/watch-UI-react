@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            width: 40%;
+            padding: 1rem;
+        }
+        .wrapper h1{
+            font-size: 2rem;
+            font-weight: bolder;
+            
+        }
+        .watch{
+            width: 100%;
+        }
+        .price{
+            font-weight: 600;
+        }
+        .light-lorem{
+            color: gray;
+            margin-top: .8rem;
+            margin-bottom: .8rem;
+        }
+        .normal-p{
+            margin-bottom: 1.5rem;
+        }
+        .empty-line{
+            height: 2px;
+            background-color: rgb(197, 197, 197);
+            margin: 1.5rem .5rem ;
+        }
+        .high-lighted{
+            color: rgb(209, 209, 7);
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+        .display{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        .bold-letter{
+            font-weight: 900;
+            font-size: 1.2rem;
+        }
+        button{
+            width: 100%;
+            padding: 8px 0;
+            margin: 1rem;
+            color: white;
+            background-color: black;
+            border: none;
+        }
+        .shipping{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* justify-items: center; */
+            gap: 5px;
+        }
+        .footer{
+            padding-top: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const App = () =>{
+            return(
+                <>
+                    <div className='wrapper'>
+                        <img src="https://teddybaldassarre.com/cdn/shop/articles/Seiko-Turtle-FI.jpg?v=1691092036" alt="" className='watch' />
+                        <h1>Automatic Watch</h1>
+                        <p className='price'>$350.00 USD</p>
+                        <p className='light-lorem'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore nemo molestiae eveniet sunt harum aut?</p>
+                        <p className='normal-p'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed doloremque beatae est non exercitationem amet quos, ipsam necessitatibus aut quo?</p>
+                        <div className='empty-line'></div>
+                        <p className='high-lighted'>FEATURES</p>
+                        <div className='display'>
+                            <p>Chronograph</p>
+                            <p>Anti-magnetic</p>
+                            <p>Master Chronometer Certified</p>
+                            <p>Chronograph</p>
+                            <p>Tachymeter</p>
+                            <p>Small seconds</p>
+                        </div>
+                        <div className='empty-line'></div>
+                        <p className='high-lighted'>PRODUCT DETAILS</p>
+                        <p><span className="bold-letter">Between lugs:</span> 20mm</p>
+                        <p><span className="bold-letter">Bracelet: </span> leather Strap</p>
+                        <p><span className="bold-letter">Case:</span> Steel</p>
+                        <p><span className="bold-letter">Case Diameter:</span> 42mm</p>
+                        <p><span className="bold-letter">Dial color:</span> Black</p>
+                        <p><span className="bold-letter">Crystal:</span> Domed, scratch-resistant</p>
+                        <p><span className="bold-letter">Water Resistant:</span> 5 bar (50 meters / 167 feet)</p>
+                        <button>ADD TO CART</button>
+                        <div className='shipping'>
+                            <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/truck.png" alt="truck" />
+                            <p className='footer'>2-3 business days delivery</p>
+                        </div>
+                    </div>
+                </>
+            )
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+    </script>
+</body>
+</html>
